@@ -25,8 +25,12 @@ public class IdetifierBasic {
 		
 		//#	All predefine java classes and interfaces we can use as identifier
 		//  never use predefine java classes or interfaces as identifier because it is not good programming practice
-		int String =10;
+		String String ="abc";
 		System.out.println(String);
 		
 	}
+	
+
+	// there is difference between reserved word and pre-defined java classes .
+	
 }
