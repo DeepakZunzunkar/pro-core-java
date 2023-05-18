@@ -12,6 +12,15 @@ public class Calculator {
 		
 	}
 	
+	
+	public static Long roundOff1(Double val) {
+		return Math.round(val);
+	}
+	
+	public static Double roundOff2(Double val) {
+		return Math.round(val*100)/100.0;
+	}
+	
 	// RoundOff upword 	95.6 or 95.5 ---> 96
 	// roundOff downword 95.4 --> 94
 	public static void testRoundOffUsingMath(){
