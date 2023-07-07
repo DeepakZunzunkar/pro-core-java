@@ -5,6 +5,8 @@ import java.util.function.Predicate;
 
 import com.dz.model.Emmployee;
 
+//Lambda Expression is an anonymous function
+//anonymous function is nameless,without return type ,without modifier.
 public class Demo1 {
 	
 		//normal way of writing method
@@ -20,6 +22,8 @@ public class Demo1 {
 		public static void main(String[] args){
 		
 			// Function
+			Function<Integer, Integer> f1=n-> { return n * n ; };  
+
 			Function<Integer, Integer> f=i->i*i;		//one line code
 			
 			System.out.println("square of 4 "+f.apply(4));
@@ -30,12 +34,20 @@ public class Demo1 {
 			
 			System.out.println("---------------------------------");
 			
+			
+//			(n)->n*n; 
+//			 n->n*n;
+
+			
+			System.err.println("____________________________________________");
 			//Predicate
 			Predicate<Integer> p=i->i%2==0;
 			System.out.println(p.test(4));
 			System.out.println("-------------------------------");
 			
 			
+			// predicate is boolean valued function .
+			// expression after evaluation always return boolean result.
 			Predicate<Emmployee> prd1=emp -> emp.getGender().equalsIgnoreCase("M");
 			Predicate<Emmployee> prd2=emp -> emp.getSalary()>5000;
 			
