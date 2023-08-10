@@ -7,7 +7,32 @@ public class Emp {
 	private Integer id;
 	private String name;
 	private List<String> mobileNumbers;
+	private Double salary;
 	
+	
+	public Emp(Integer id, String name, Double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+
+
+	public Double getSalary() {
+		return salary;
+	}
+
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+
+
+	public Emp() {
+		super();
+	}
+
+
 	public Emp(Integer id, String name, List<String> mobileNumbers) {
 		super();
 		this.id = id;
