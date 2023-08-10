@@ -24,18 +24,26 @@ public class Stream02 {
 		Stream<String> nameStream = Stream.of("sachin","manish","ganu","rahul","krunal");
 		nameStream.forEach(System.out::println);
 		
+		
+		
 //		Dout ?
 		/*Stream<int[]> numbsStream = Stream.of(new int[]{2,4,5,15,11,22,35});
 		numbsStream.forEach(nbr->{
 			System.out.println(nbr.length);
 		});*/
 		
+		IntStream numIntStrm = IntStream.of(new int[]{2,4,5,15,11,22,35});
+		numIntStrm.forEach(nbr->{
+			System.out.println(nbr+",");
+		});
+		
+		System.out.println("____________________________________");
 		IntStream numbsStream = Arrays.stream(new int[]{2,4,5,15,11,22,35});
 		numbsStream.forEach(nbr->{
 			System.out.print(nbr);
 		});
 		
-		
+		System.out.println("____________________________________");
 //		03. using builder pattern  
 		Stream<Object> build = Stream.builder().build();
 		

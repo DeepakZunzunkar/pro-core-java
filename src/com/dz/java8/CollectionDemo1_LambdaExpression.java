@@ -3,7 +3,10 @@ package com.dz.java8;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 import com.dz.java8.stream.Emp;
@@ -74,6 +77,34 @@ public class CollectionDemo1_LambdaExpression {
 		//sort based on alphabetical order of emp name
 		Collections.sort(al,(e1,e2)->e1.getName().compareTo(e2.getName()));
 		System.out.println(al);
+		
+		//map
+		Map<Integer, String> map=new HashMap<Integer, String>();
+		map.put(100, "amit");
+		map.put(101, "manish");
+		map.put(102, "sumit");
+		map.put(103, "sachin");
+		
+		/*map.forEach((k,v)->{
+		});*/
+		
+		Map<Integer, String> map1=new HashMap<Integer, String>();
+		
+		map.entrySet().stream()
+		.filter(mp-> mp.getKey()!=102)
+		.forEach(mmm->{
+//			System.out.println(mmm.getKey()+" : "+mmm.getValue());
+			map1.put(mmm.getKey(),mmm.getValue());
+		});
+		
+		List<Entry<Integer, String>> keyVal = map.entrySet().stream()
+					  .filter(mp-> mp.getKey()!=101)
+					  .collect(Collectors.toList());
+		
+		keyVal.forEach(ss->{
+			System.out.println(ss.getKey()+" : "+ss.getValue());
+		});
+		
 	}
 
 	private static void sortInTraditionalWay(List<Integer> al) {
